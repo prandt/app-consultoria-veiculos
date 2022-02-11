@@ -16,17 +16,24 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Apolice implements Serializable{
+public class Apolice implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private String id;
+
 	private String numeroApolice;
+
 	@JsonFormat(pattern = "dd-MM-yyyy")
 	private Date inicioVigencia;
+
 	@JsonFormat(pattern = "dd-MM-yyyy")
 	private Date fimVigencia;
+
 	private String placaVeiculo;
+
 	private Float valor;
+
+	private Cliente cliente;
 
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.rprandt.appseguradoraveiculos.domains.Cliente;
 import com.rprandt.appseguradoraveiculos.repositories.ClienteRepository;
+import com.rprandt.appseguradoraveiculos.services.exception.CpfAlreadyRegistered;
 import com.rprandt.appseguradoraveiculos.services.exception.ObjectNotFoundException;
 
 @Service
@@ -26,7 +27,20 @@ public class ClienteService {
 	}
 
 	public void save(Cliente obj) {
+		if(repo.findByCpf(obj.getCpf()) != null) {
+			throw new CpfAlreadyRegistered("CPF já cadastrado");
+		}
 		repo.save(obj);
+	}
+	
+	public void deleteById(String id) {
+		findById(id);
+		try {
+			repo.deleteById(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }

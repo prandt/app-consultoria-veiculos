@@ -7,5 +7,7 @@ import com.rprandt.appseguradoraveiculos.domains.Cliente;
 
 @Repository
 public interface ClienteRepository extends MongoRepository<Cliente, String>{
+	
+	Cliente findByCpf(String cpf);
 
 }

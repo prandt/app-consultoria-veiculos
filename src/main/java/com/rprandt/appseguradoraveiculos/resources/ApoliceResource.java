@@ -3,8 +3,11 @@ package com.rprandt.appseguradoraveiculos.resources;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.rprandt.appseguradoraveiculos.domains.Apolice;
 import com.rprandt.appseguradoraveiculos.dto.ApoliceDTO;
+import com.rprandt.appseguradoraveiculos.dto.ApoliceNewDTO;
 import com.rprandt.appseguradoraveiculos.services.ApoliceService;
 
 @RestController
@@ -31,7 +35,8 @@ public class ApoliceResource {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Void> save(@RequestBody Apolice obj){
+	public ResponseEntity<Void> save(@Valid @RequestBody ApoliceNewDTO objDTO){
+		Apolice obj = service.fromDTO(objDTO);
 		service.save(obj);
 		return ResponseEntity.noContent().build();
 	}
@@ -41,5 +46,12 @@ public class ApoliceResource {
 		Apolice obj = service.findByNumeroApolice(numeroApolice);
 		return ResponseEntity.ok().body(obj);
 	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Void> delete(@PathVariable String id){
+		service.delete(id);
+		return ResponseEntity.noContent().build();
+	}
+	
 
 }
