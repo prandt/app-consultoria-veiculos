@@ -34,6 +34,10 @@ public class ClienteService {
 		repo.save(obj);
 	}
 	
+	public Cliente findByCpf(String cpf) {
+		return repo.findByCpf(cpf);
+	}
+	
 	public void update(Cliente obj) {
 		repo.save(obj);
 	}
