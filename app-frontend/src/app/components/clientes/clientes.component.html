@@ -1,7 +1,8 @@
 <h3>Clientes</h3>
 <br>
 <form>
-  <input class="form-control" type="text" placeholder="Pesquisar Cliente" aria-label="Search">
+  <input class="form-control" type="text"  [(ngModel)]="nome"  name="search"  placeholder="Pesquisar" Cliente aria-label="Search">
+  <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon" (click)="find(nome)">Pesquisar</button>
 </form>
 <br>
 <button type="button" class="btn btn-success" (click)="cadastrar()">Novo cliente +</button>

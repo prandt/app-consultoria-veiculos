@@ -12,22 +12,23 @@ import { ClienteService } from 'src/app/service/cliente.service';
 export class ClientesComponent implements OnInit {
 
   clientes: ClienteModel[]
+  nome: string
 
   constructor(private router: Router, private serviceCliente: ClienteService) { }
 
   ngOnInit(): void {
-    this.findAll()
+    this.find("")
   }
 
-  findAll() {
-    this.serviceCliente.findAll().subscribe(obj => this.clientes = obj)
+  find(nome: string) {
+    this.serviceCliente.find(nome).subscribe(obj => this.clientes = obj)
   }
 
   detail(id: string) {
     this.router.navigate([`/clientes/${id}`])
   }
 
-  cadastrar(){
+  cadastrar() {
     this.router.navigate(['/clientes/cadastrar'])
   }
 

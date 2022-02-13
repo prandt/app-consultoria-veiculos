@@ -16,8 +16,11 @@ export class ClienteService {
     return this.http.get<ClienteModel>(`${api_url}/${id}`)
   }
 
-  findAll(): Observable<any[]>{
-    return this.http.get<any[]>(api_url)
+  find(nome: string): Observable<any[]>{
+    if(nome === ""){
+      return this.http.get<any[]>(api_url)
+    }
+    return this.http.get<any[]>(`${api_url}/search/${nome}`)
   }
 
   save(cliente: ClienteModel): Observable<any>{
