@@ -38,6 +38,10 @@ public class ApoliceService {
 		Optional<Apolice> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Object not found"));
 	}
+	
+	public List<Apolice> findApoliceByArgs(String args){
+		return repo.findApoliceByArgs(args);
+	}
 
 	public void delete(String id) {
 		findById(id);

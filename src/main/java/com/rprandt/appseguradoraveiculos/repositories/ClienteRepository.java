@@ -13,7 +13,7 @@ public interface ClienteRepository extends MongoRepository<Cliente, String>{
 	
 	Cliente findByCpf(String cpf);
 	
-	@Query("{ 'nome': { $regex: ?0, $options: 'i' } }")
+	@Query("{ $or: [{ 'nome': { $regex: ?0, $options: 'i' } }, { 'cpf': { $regex: ?0, $options: 'i' } } ] }")
 	List<Cliente> findByNome(String nome);
 
 }

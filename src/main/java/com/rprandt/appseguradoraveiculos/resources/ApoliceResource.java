@@ -36,6 +36,12 @@ public class ApoliceResource {
 		return ResponseEntity.ok().body(listDTO);
 	}
 	
+	@GetMapping("/search/{args}")
+	public ResponseEntity<List<Apolice>> findApoliceByArgs(@PathVariable String args){
+		List<Apolice> list = service.findApoliceByArgs(args);
+		return ResponseEntity.ok().body(list);
+	}
+	
 	@PostMapping
 	public ResponseEntity<Void> save(@Valid @RequestBody ApoliceNewDTO objDTO){
 		Apolice obj = service.fromDTO(objDTO);
