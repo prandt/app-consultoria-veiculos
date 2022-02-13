@@ -10,12 +10,16 @@
         <h6>Valor da apólice: R$ {{apolice.valor.toFixed(2)}} </h6>
         <div *ngIf="isExpired(apolice.fimVigencia)">
             <h6>Venceu há {{calcularData(apolice.fimVigencia)}} dias</h6>
+            <div class="alert alert-danger" role="alert">
+                A apólice está vencida!
+              </div>
         </div>
         <div *ngIf="!isExpired(apolice.fimVigencia)">
-            <h6>Vencerá em daqui {{calcularData(apolice.fimVigencia)}} a dias</h6>
+            <h6>Vencerá em {{calcularData(apolice.fimVigencia)}} a dias</h6>
         </div>
         <div *ngIf="isExpired(apolice.fimVigencia) === 'Vence Hoje'">
             <h6>Vencerá hoje</h6>
         </div>
+        
     </div>
 </div>
