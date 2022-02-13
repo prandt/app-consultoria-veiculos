@@ -15,7 +15,7 @@ services:
       - database
   frontend:
     image: "app-equiplano"
-    build: ./frontend/.
+    build: ./app-frontend/.
     ports:
       - 8081:80
     depends_on:

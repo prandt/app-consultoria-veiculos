@@ -32,6 +32,7 @@ public class ApoliceResource {
 	
 	@GetMapping
 	public ResponseEntity<List<ApoliceDTO>> findAll(){
+		System.out.println("Alooo");
 		List<Apolice> list = service.findAll();
 		List<ApoliceDTO> listDTO = list.stream().map(x -> new ApoliceDTO(x)).collect(Collectors.toList());
 		return ResponseEntity.ok().body(listDTO);
