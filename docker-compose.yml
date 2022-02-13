@@ -2,17 +2,21 @@ version: '3'
 services:
   database:
     image: mongo
-    container_name: "db-consultoria"
     ports:
       - 27017:27017
     command: mongod --logpath=/dev/null # --quiet
   backend:
     build: .
-    image: backend-consultoria
     ports:
       - 9091:8080
     depends_on:
       - database
     links:
       - database
-  
+  frontend:
+    image: "app-equiplano"
+    build: ./frontend/.
+    ports:
+      - 8081:80
+    depends_on:
+      - backend
