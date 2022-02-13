@@ -48,8 +48,11 @@ public class ClienteService {
 			repo.deleteById(id);
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		
+		}	
+	}
+	
+	public List<Cliente> findByName(String nome){
+		return repo.findByNome(nome);
 	}
 
 }

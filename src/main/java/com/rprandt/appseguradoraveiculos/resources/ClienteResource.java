@@ -62,4 +62,10 @@ public class ClienteResource {
 		Cliente obj = service.findByCpf(cpf); 
 		return ResponseEntity.ok().body(obj);
 	}
+	
+	@GetMapping("/search/{nome}")
+	public ResponseEntity<List<Cliente>> findByNome(@PathVariable String nome){
+		List<Cliente> list = service.findByName(nome); 
+		return ResponseEntity.ok().body(list);
+	}
 }
