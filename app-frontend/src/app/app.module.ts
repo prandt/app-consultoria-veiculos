@@ -14,6 +14,9 @@ import { RouterModule } from '@angular/router';
 import { CadatrarApolicesComponent } from './components/cadatrar-apolices/cadatrar-apolices.component';
 import { DetalhesApoliceComponent } from './components/detalhes-apolice/detalhes-apolice.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxMaskModule } from 'ngx-mask'
+import { MatIconModule } from '@angular/material/icon'
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

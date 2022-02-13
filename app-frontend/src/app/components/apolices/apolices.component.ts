@@ -31,6 +31,10 @@ export class ApolicesComponent implements OnInit {
     }
   }
 
+  edit(numero: string) {
+    this.router.navigate([`/apolices/cadastrar/${numero}`])
+  }
+
   detail(numero: string) {
     this.router.navigate([`/apolices/${numero}`])
   }

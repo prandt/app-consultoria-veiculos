@@ -4,12 +4,12 @@
     <div class="row g-3">
         <div class="col-sm-12">
             <label class="form-label">Nome Completo</label>
-            <input type="text" class="form-control" required [(ngModel)]="cliente.nome" name="nome">
+            <input type="text" class="form-control" [(ngModel)]="cliente.nome" name="nome" required>
         </div>
 
         <div class="col-12">
             <label for="cpf" class="form-label">CPF</label>
-            <input [attr.disabled]="isUpdate? '' : null" type="text" class="form-control" [(ngModel)]="cliente.cpf" placeholder="ex: 123.465.789-0"
+            <input [attr.disabled]="isUpdate? '' : null" mask="000.000.000-00" type="text" class="form-control" [(ngModel)]="cliente.cpf" placeholder="ex: 123.465.789-0"
                 name="cpf" required>
         </div>
 
@@ -20,7 +20,7 @@
 
         <div class="col-12">
             <label class="form-label">UF</label>
-            <input type="text" class="form-control" [(ngModel)]="cliente.uf" placeholder="ex: PR, SP, RJ..."  name="uf" required
+            <input type="text" mask="AA" class="form-control" [(ngModel)]="cliente.uf" placeholder="ex: PR, SP, RJ..."  name="uf" required
                 maxlength="2">
         </div>
 

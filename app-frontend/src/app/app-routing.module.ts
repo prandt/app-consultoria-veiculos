@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'clientes/:id', component: CadastrarClientesComponent },
   { path: 'apolices/cadastrar', component: CadatrarApolicesComponent },
   { path: 'apolices/:id', component: DetalhesApoliceComponent },
+  { path: 'apolices/cadastrar/:id', component: CadatrarApolicesComponent },
   { path: 'not-found' , component: NotFoundComponent}
-
 ];
 
 @NgModule({

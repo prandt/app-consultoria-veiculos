@@ -5,12 +5,12 @@
 
         <div class="col-sm-12">
             <label class="form-label">Cpf do Cliente</label>
-            <input type="text" class="form-control" [(ngModel)]="cpf" name="cpf">
+            <input type="text" class="form-control" mask="000.000.000-00" placeholder="123.456.789-0" [(ngModel)]="cpf" name="cpf">
         </div>
 
         <div class="col-sm-12">
             <label class="form-label">Inicio da vigencia</label>
-            <input type="date" class="form-control" required [(ngModel)]="apolice.inicioVigencia" name="inicioVigencia">
+            <input matInput  type="date" class="form-control" required [(ngModel)]="apolice.inicioVigencia"  name="inicioVigencia">
         </div>
 
         <div class="col-12">
@@ -25,8 +25,7 @@
 
         <div class="col-12">
             <label class="form-label">Valor</label>
-            <input type="number" accept="number" class="form-control" [(ngModel)]="apolice.valor" name="valor" required
-                maxlength="2">
+            <input type="text" mask="separator.2" class="form-control"  [(ngModel)]="apolice.valor" name="valor" require>
         </div>
 
         <div class="col-2">

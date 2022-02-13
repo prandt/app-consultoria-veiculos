@@ -4,6 +4,7 @@ import { ClienteModel } from 'src/app/models/cliente.model';
 import { ClienteService } from 'src/app/service/cliente.service';
 
 
+
 @Component({
   selector: 'app-clientes',
   templateUrl: './clientes.component.html',
