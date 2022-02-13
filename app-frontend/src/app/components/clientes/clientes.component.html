@@ -1,0 +1,25 @@
+<h3>Clientes</h3>
+<br>
+<form>
+  <input class="form-control" type="text" placeholder="Pesquisar Cliente" aria-label="Search">
+</form>
+<br>
+<button type="button" class="btn btn-success" (click)="cadastrar()">Novo cliente +</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Cidade</th>
+      <th scope="col">UF</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of clientes">
+      <td>{{c.nome}}</td>
+      <td>{{c.cidade}}</td>
+      <td>{{c.uf}}</td>
+      <td><button type="submit" class="btn btn-primary btn-sm" (click)="detail(c.id)">Detalhes</button></td>
+    </tr>
+  </tbody>
+</table>

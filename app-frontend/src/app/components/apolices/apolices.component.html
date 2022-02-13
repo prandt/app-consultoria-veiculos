@@ -1,0 +1,25 @@
+<h3>Apólices</h3>
+<br>
+<form>
+  <input class="form-control" type="text" placeholder="Pesquisar Apólices" aria-label="Search">
+</form>
+<br>
+<button type="button" class="btn btn-success" routerLink="/apolices/cadastrar">Nova apólice +</button>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Numero</th>
+      <th scope="col">Placa do Veículo</th>
+      <th scope="col">Valor</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let obj of apolices">
+      <td>{{obj.numeroApolice}}</td>
+      <td>{{obj.placaVeiculo}}</td>
+      <td>R$ {{obj.valor.toFixed(2)}}</td>
+      <td><button type="submit" class="btn btn-primary btn-sm" (click)="detail(obj.numeroApolice)">Detalhes</button></td>
+    </tr>
+  </tbody>
+</table>

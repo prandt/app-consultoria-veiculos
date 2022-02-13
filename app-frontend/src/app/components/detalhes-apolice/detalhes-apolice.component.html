@@ -1,0 +1,21 @@
+<h4>Detalhes da Apólice</h4>
+<br>
+<div class="card" style="width: 25rem;">
+    <div class="card-body">
+        <h5 class="card-title">Apolice: {{apolice.numeroApolice}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Cliente >> {{cliente.nome}}</h6>
+        <br>
+        <h6>Início vigencia: {{apolice.inicioVigencia}}</h6>
+        <h6>Fim vigencia: {{apolice.fimVigencia}}</h6>
+        <h6>Valor da apólice: R$ {{apolice.valor.toFixed(2)}} </h6>
+        <div *ngIf="isExpired(apolice.fimVigencia)">
+            <h6>Venceu há {{calcularData(apolice.fimVigencia)}} dias</h6>
+        </div>
+        <div *ngIf="!isExpired(apolice.fimVigencia)">
+            <h6>Vencerá em daqui {{calcularData(apolice.fimVigencia)}} a dias</h6>
+        </div>
+        <div *ngIf="isExpired(apolice.fimVigencia) === 'Vence Hoje'">
+            <h6>Vencerá hoje</h6>
+        </div>
+    </div>
+</div>

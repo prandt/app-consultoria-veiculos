@@ -1,0 +1,40 @@
+<form>
+    <h4>Cadastro de Apólices</h4>
+    <br>
+    <div class="row g-3">
+
+        <div class="col-sm-12">
+            <label class="form-label">Cpf do Cliente</label>
+            <input type="text" class="form-control" [(ngModel)]="cpf" name="cpf">
+        </div>
+
+        <div class="col-sm-12">
+            <label class="form-label">Inicio da vigencia</label>
+            <input type="date" class="form-control" required [(ngModel)]="apolice.inicioVigencia" name="inicioVigencia">
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">Fim vigencia</label>
+            <input type="date" class="form-control" [(ngModel)]="apolice.fimVigencia" name="fimVigencia" required>
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">Placa do Veículo</label>
+            <input type="text" class="form-control" [(ngModel)]="apolice.placaVeiculo" name="placaVeiculo" required>
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">Valor</label>
+            <input type="number" accept="number" class="form-control" [(ngModel)]="apolice.valor" name="valor" required
+                maxlength="2">
+        </div>
+
+        <div class="col-2">
+            <button type="button" type="submit" class="btn btn-outline-success" (click)="save(apolice)">Salvar</button>
+        </div>
+
+        <div class="col-2">
+            <button type="button" class="btn btn-danger" routerLink="/apolices">Cancelar</button>
+        </div>
+    </div>
+</form>

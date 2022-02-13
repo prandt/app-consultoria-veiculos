@@ -1,0 +1,43 @@
+<form>
+    <h4>Cadastro de Clientes</h4>
+    <br>
+    <div class="row g-3">
+        <div class="col-sm-12">
+            <label class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" required [(ngModel)]="cliente.nome" name="nome">
+        </div>
+
+        <div class="col-12">
+            <label for="cpf" class="form-label">CPF</label>
+            <input [attr.disabled]="isUpdate? '' : null" type="text" class="form-control" [(ngModel)]="cliente.cpf" placeholder="ex: 123.465.789-0"
+                name="cpf" required>
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">Cidade</label>
+            <input type="text" class="form-control" [(ngModel)]="cliente.cidade" name="cidade" required>
+        </div>
+
+        <div class="col-12">
+            <label class="form-label">UF</label>
+            <input type="text" class="form-control" [(ngModel)]="cliente.uf" placeholder="ex: PR, SP, RJ..."  name="uf" required
+                maxlength="2">
+        </div>
+
+        <div class="col-2"  *ngIf="!isUpdate">
+            <button type="button" type="submit" class="btn btn-outline-success" (click)="save(cliente)">Salvar</button>
+        </div>
+
+        <div class="col-2"  *ngIf="isUpdate">
+            <button type="button" type="submit" class="btn btn-outline-success" (click)="update(cliente)">Salvar</button>
+        </div>
+
+        <div class="col-2">
+            <button type="button" class="btn btn-danger" routerLink="/clientes">Cancelar</button>
+        </div>
+        
+        <div class="col-2"  *ngIf="isUpdate">
+            <button type="button" type="submit" class="btn btn-warning" (click)="delete(cliente.id)">Excluir</button>
+        </div>
+    </div>
+</form>
