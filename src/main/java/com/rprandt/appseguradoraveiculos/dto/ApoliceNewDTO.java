@@ -18,11 +18,11 @@ public class ApoliceNewDTO {
 	
 	private String numeroApolice;
 
-	@JsonFormat(pattern = "dd-MM-yyyy")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	@NotNull(message = "O campo Inicio Vigencia Nao pode ficar vazio!")
 	private Date inicioVigencia;
 
-	@JsonFormat(pattern = "dd-MM-yyyy")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	@NotNull(message = "O campo Fim Vigencia Nao pode ficar vazio!")
 	private Date fimVigencia;
 	

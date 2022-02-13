@@ -27,9 +27,14 @@ public class ClienteService {
 	}
 
 	public void save(Cliente obj) {
+		obj.setId(null);
 		if(repo.findByCpf(obj.getCpf()) != null) {
 			throw new CpfAlreadyRegistered("CPF já cadastrado");
 		}
+		repo.save(obj);
+	}
+	
+	public void update(Cliente obj) {
 		repo.save(obj);
 	}
 	

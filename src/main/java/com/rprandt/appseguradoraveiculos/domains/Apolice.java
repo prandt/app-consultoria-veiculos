@@ -24,10 +24,10 @@ public class Apolice implements Serializable {
 
 	private String numeroApolice;
 
-	@JsonFormat(pattern = "dd-MM-yyyy")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date inicioVigencia;
 
-	@JsonFormat(pattern = "dd-MM-yyyy")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date fimVigencia;
 
 	private String placaVeiculo;
