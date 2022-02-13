@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { CadatrarApolicesComponent } from './components/cadatrar-apolices/cadatrar-apolices.component';
 import { DetalhesApoliceComponent } from './components/detalhes-apolice/detalhes-apolice.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DetalhesApoliceComponent } from './components/detalhes-apolice/detalhes
     NavbarComponent,
     CadastrarClientesComponent,
     CadatrarApolicesComponent,
-    DetalhesApoliceComponent
+    DetalhesApoliceComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

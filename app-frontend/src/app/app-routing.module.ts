@@ -6,6 +6,7 @@ import { CadatrarApolicesComponent } from './components/cadatrar-apolices/cadatr
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { DetalhesApoliceComponent } from './components/detalhes-apolice/detalhes-apolice.component';
 import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'clientes/cadastrar', component: CadastrarClientesComponent },
   { path: 'clientes/:id', component: CadastrarClientesComponent },
   { path: 'apolices/cadastrar', component: CadatrarApolicesComponent },
-  { path: 'apolices/:id', component: DetalhesApoliceComponent }
+  { path: 'apolices/:id', component: DetalhesApoliceComponent },
+  { path: 'not-found' , component: NotFoundComponent}
 
 ];
 

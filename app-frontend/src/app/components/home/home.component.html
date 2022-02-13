@@ -1,3 +1,12 @@
+<h4>Pesquisar Apólice</h4>
 <form>
-    <input class="form-control" type="text" placeholder="Pesquisar Apolice (Numero Apolice)" aria-label="Search">
+    <div class="row g-3">
+        <div class="col-sm-8">
+            <input class="form-control" type="text" [(ngModel)]="numeroApolice"  name="search" placeholder="Pesquisar apólice (numero apólice)">
+        </div>
+        <div class="col-sm-4">
+            <button type="button" (click)="callApoliceDetalhes(numeroApolice)" class="btn btn-success">Pesquisar</button>
+        </div>
+    </div>
 </form>
+<br>
