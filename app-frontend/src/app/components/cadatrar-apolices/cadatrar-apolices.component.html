@@ -3,9 +3,14 @@
     <br>
     <div class="row g-3">
 
-        <div class="col-sm-12">
+        <div *ngIf="!isEdit" class="col-sm-12">
             <label class="form-label">Cpf do Cliente</label>
             <input type="text" class="form-control" mask="000.000.000-00" placeholder="123.456.789-0" [(ngModel)]="cpf" name="cpf">
+        </div>
+
+        <div *ngIf="isEdit" class="col-sm-12">
+            <label class="form-label">Nome do Cliente</label>
+            <input disabled="true" type="text" class="form-control"   [(ngModel)]="cliente.nome" name="nome">
         </div>
 
         <div class="col-sm-12">
@@ -28,8 +33,16 @@
             <input type="text" mask="separator.2" class="form-control"  [(ngModel)]="apolice.valor" name="valor" require>
         </div>
 
-        <div class="col-2">
+        <div *ngIf="!isEdit" class="col-2">
             <button type="button" type="submit" class="btn btn-outline-success" (click)="save(apolice)">Salvar</button>
+        </div>
+
+        <div *ngIf="isEdit" class="col-2">
+            <button type="button" type="submit" class="btn btn-outline-success" (click)="update(apolice)">Salvar</button>
+        </div>
+
+        <div *ngIf="isEdit" class="col-2">
+            <button type="button" type="submit" class="btn btn-outline-warning" (click)="delete(apolice.id)">Excluir</button>
         </div>
 
         <div class="col-2">

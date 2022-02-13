@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApoliceModel } from '../models/apolice.model';
 
-const api_url = "http://localhost:8080/apolices"
+const api_url = "http://localhost:9091/apolices"
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +18,14 @@ export class ApoliceService {
 
   save(apolice: ApoliceModel): Observable<any>{
     return this.http.post<any>(api_url, apolice)
+  }
+
+  update(apolice: ApoliceModel): Observable<any>{
+    return this.http.put<any>(api_url, apolice)
+  }
+ 
+  delete(id: string): Observable<any>{
+    return this.http.delete<any>(`${api_url}/${id}`)
   }
 
   findByArgs(args: string): Observable<any[]>{

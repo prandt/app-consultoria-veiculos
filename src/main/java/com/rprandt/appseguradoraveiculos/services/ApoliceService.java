@@ -27,6 +27,11 @@ public class ApoliceService {
 	}
 
 	public void save(Apolice obj) {
+		obj.setId(null);
+		repo.save(obj);
+	}
+	
+	public void update(Apolice obj) {
 		repo.save(obj);
 	}
 
