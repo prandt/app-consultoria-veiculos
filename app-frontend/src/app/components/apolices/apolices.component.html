@@ -1,7 +1,14 @@
 <h3>Apólices</h3>
 <br>
 <form>
-  <input class="form-control" type="text" placeholder="Pesquisar Apólices" aria-label="Search">
+  <div class="row g-3">
+      <div class="col-sm-8">
+          <input class="form-control" type="text" name="search" [(ngModel)]="args" placeholder="Numero apólice, placa do veículo ou pelo cpf do cliente">
+      </div>
+      <div class="col-sm-4">
+          <button type="submit" (click)="findByArgs(args)" class="btn btn-success">Pesquisar</button>
+      </div>
+  </div>
 </form>
 <br>
 <button type="button" class="btn btn-success" routerLink="/apolices/cadastrar">Nova apólice +</button>

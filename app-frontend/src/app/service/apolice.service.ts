@@ -20,6 +20,10 @@ export class ApoliceService {
     return this.http.post<any>(api_url, apolice)
   }
 
+  findByArgs(args: string): Observable<any[]>{
+    return this.http.get<any[]>(`${api_url}/search/${args}`)
+  }
+
   findByNumeroApolice(numero: string): Observable<ApoliceModel>{
     return this.http.get<ApoliceModel>(`${api_url}/${numero}`)
   }

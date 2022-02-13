@@ -11,18 +11,27 @@ import { ApoliceService } from 'src/app/service/apolice.service';
 export class ApolicesComponent implements OnInit {
 
   apolices: ApoliceModel[]
+  args: string
 
-  constructor(private router: Router ,private service: ApoliceService) { }
+  constructor(private router: Router, private service: ApoliceService) { }
 
   ngOnInit(): void {
     this.findAll()
   }
 
-  findAll(){
+  findAll() {
     this.service.findAll().subscribe(obj => this.apolices = obj)
   }
 
-  detail(numero: string){
+  findByArgs(args: string) {
+    if (args === "") {
+      this.findAll()
+    } else {
+      this.service.findByArgs(args).subscribe(obj => this.apolices = obj)
+    }
+  }
+
+  detail(numero: string) {
     this.router.navigate([`/apolices/${numero}`])
   }
 
