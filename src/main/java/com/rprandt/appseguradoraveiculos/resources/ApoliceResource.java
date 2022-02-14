@@ -51,7 +51,7 @@ public class ApoliceResource {
 	}
 	
 	@PutMapping
-	public ResponseEntity<Void> save(@Valid @RequestBody Apolice obj){
+	public ResponseEntity<Void> update(@Valid @RequestBody Apolice obj){
 		service.update(obj);
 		return ResponseEntity.noContent().build();
 	}
