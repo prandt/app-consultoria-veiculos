@@ -14,7 +14,7 @@
 
 Para consumir a aplicação basta acessar o localhost:8081
 
-(o backend está disponivél na porta 9091)
+(o backend está disponível na porta 9091)
 
 ## Stack utilizada
 
