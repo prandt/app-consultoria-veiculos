@@ -1,7 +1,10 @@
 
-# Teste técnico EQUIPLANO
+# Teste técnico Spring, Angular, MongoDB e Docker
 
+A principio esse projeto tinha sido feito para relizar um teste técnico para uma empresa, porém nunca fui respondido.
+Com esse projeto consegui aprimorar conceitos em Backend utilizando a stack spring boot, também aprendi muito sobre Angular no frontend e mongodb como DB.
 
+Docker foi uma expericiencia totalmente nova para mim nesse projeto, com isso aprendi muito sobre Docker compose e Dockerfile
 
 ## Instalação
 ```bash
