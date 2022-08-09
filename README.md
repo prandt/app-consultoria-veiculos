@@ -6,7 +6,7 @@ Com esse projeto consegui aprimorar conceitos em Backend utilizando a stack spri
 
 Docker foi uma expericiencia totalmente nova para mim nesse projeto, com isso aprendi muito sobre Docker compose e Dockerfile
 
-## Instalação
+## Instalação utilizando apenas Docker
 ```bash
   git clone https://github.com/prandt/app-consultoria-veiculos-EQUIPLANO.git
   cd app-consultoria-veiculos-EQUIPLANO
