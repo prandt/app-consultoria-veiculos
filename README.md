@@ -15,7 +15,7 @@ Docker foi uma expericiencia totalmente nova para mim nesse projeto, com isso ap
 
 ## Utilização
 
-Para consumir a aplicação basta acessar o localhost:8081
+Para consumir a aplicação basta acessar `http://localhost:8081/`
 
 (o backend está disponível na porta 9091)
 
