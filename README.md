@@ -9,8 +9,8 @@ Docker foi uma expericiencia totalmente nova para mim nesse projeto, com isso ap
 ## Instalação utilizando apenas Docker
 
 ```bash
-  git clone https://github.com/prandt/app-consultoria-veiculos-EQUIPLANO.git
-  cd app-consultoria-veiculos-EQUIPLANO
+  git clone https://github.com/prandt/app-consultoria-veiculos.git
+  cd app-consultoria-veiculos
   docker-compose up --build 
 ```
 
