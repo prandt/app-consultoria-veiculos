@@ -1,10 +1,7 @@
 
 # Teste técnico Spring, Angular, MongoDB e Docker
 
-A principio esse projeto tinha sido feito para relizar um teste técnico para uma empresa, porém nunca fui respondido.
-Com esse projeto consegui aprimorar conceitos em Backend utilizando a stack spring boot, também aprendi muito sobre Angular no frontend e mongodb como DB.
-
-Docker foi uma expericiencia totalmente nova para mim nesse projeto, com isso aprendi muito sobre Docker compose e Dockerfile
+Desenvolvi esse projeto para aprimorar minhas habilidades utilizando tecnologias de ponta do mercado.
 
 ## Instalação utilizando apenas Docker
 
@@ -20,27 +17,28 @@ Para consumir a aplicação basta acessar `http://localhost:8081/`
 
 ## Stack utilizada
 
-**Front-end:** Angular
+- **Angular**
 
-**Back-end:** Spring Boot (Java)
+- **Spring Boot (Java)**
 
-**Database:** MongoDB
+- **MongoDB**
 
-## Screenshots de telas e componentes
+- **Docker**
 
-Todas as telas possuiem o navbar onde é possivél navegar entre telas
+## Screenshots de telas
 
-![image](https://user-images.githubusercontent.com/42305798/183541999-3d225740-ad3c-4d35-b5ce-76b524d9ea26.png)
+Todas as telas possuem o navbar onde é possível navegar entre telas
+
+<img src="https://user-images.githubusercontent.com/42305798/183541999-3d225740-ad3c-4d35-b5ce-76b524d9ea26.png" alt="Navbar Image" width="400"/>
 
 A **Tela principal** possui apenas um campo de pesquisa de Apólice 
 
-![image](https://user-images.githubusercontent.com/42305798/183541937-ff8d6a80-582c-44f5-9086-fe68968efdae.png)
+<img src="https://user-images.githubusercontent.com/42305798/183541937-ff8d6a80-582c-44f5-9086-fe68968efdae.png" alt="Principal screen image" width="400"/>
 
-A **Tela de clientes** é possivél obter uma lista de clientes 
+A **Tela de clientes** é possível obter uma lista de clientes 
 
-![image](https://user-images.githubusercontent.com/42305798/183542097-cfa1c73c-45bd-4b96-8436-f6c21a4de6ce.png)
+<img src="https://user-images.githubusercontent.com/42305798/183542097-cfa1c73c-45bd-4b96-8436-f6c21a4de6ce.png" alt="Client list image" width="400">
 
 **Tela para cadastrar clientes**
 
-![image](https://user-images.githubusercontent.com/42305798/183541720-f336f69f-6d50-43be-b3db-0a236328f1e8.png)
-
+<img src="https://user-images.githubusercontent.com/42305798/183541720-f336f69f-6d50-43be-b3db-0a236328f1e8.png" alt="Register client image" width="400">
